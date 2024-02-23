@@ -21,7 +21,7 @@ def area_tri(b, h):
 
 def intro():
     print("Welcome To My Area Calcukator")
-    shape = ("square", 'rectangle', 'triangle')
+    shape = ("square"(), 'rectangle', 'triangle')
     print(shape)
     p = input("pick one shape: ")
 
