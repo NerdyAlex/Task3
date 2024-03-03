@@ -1,75 +1,57 @@
-l = []
-NAME = input("WELCOME TO YOUR NOTEPAD")
-
-def create(name):
-    p = input(f"{name}\n")
-    
-
-def save(name):    
-    l.append(name)
-
-def edit1():
-    name = input("Which note: ")
-    if name in l:
-        new_content = input(f"{name}\n")
-        l.append(new_content)
-        l.remove(name)
-    else:
-        print('Nothing')
-
-def delete():
-    print(l)
-    d = input('Which note do you want to delete: ')
-    if d in l:
-        l.remove(d)
-        print(l)
-    else:
-        print("Nothing to delete")
-
-
-
-def creating():
-    run = True
-    while run:
-        print('Welcome')
-        n = input("1.Create a Note\n2.Edit a note\n3.Delete a note\n4.List Notes\n5.quit\nchoose form (1, 2, 3, 4, 5):")
+#modify the code again
+class Notebook():
+    def __init__(self):
+        self.notes=[]
         
+    def create(self, name, content):
+        self.notes.append({'name': name, 'content': content})
+        print(f"{name} is saved sucussfully")
 
-        if n == "1":
-            name = input("Enter the name of note: ")
-            p = input(f"{name}\n")           
-            
-            s = input("Do you want to save/(yes or no):  ")
-            if s == "yes":
-                save(name)
-                print(l)
+    def edit(self, name):
+        edit_name = input("Which note do you want to edit? ")
+        for note in self.notes:
+            if note['name'] == edit_name:
+                new_content = input(f"Enter new content for {edit_name}: ")
+                note['content'] = new_content
+                print('Edited successfully')
+                return
+        print('Note does not exist')
 
-            elif s == "no":
-                pass
-            else:
-                print("Nothing here")
 
-        elif n == "2":
-            print(l)
+    def listing_note(self):
+        print("Listing Note...")
+        for note in self.notes:
+            print(f"Name: {note['name']}\nContent: {note['content']}")
+        if not self.notes:
+            print("No note exist")
 
-            
-            edit1()
+linkers = Notebook()
 
-        elif n =="3":
-            delete()
+def links():
+    run = True
+    print('Welcome..')
+    while run:
+        print('Menu\n')
+        print('1. Create a note')
+        print('2. Edit a note')
+        
+        print('3. list the note')
+        print('4. Quit')
+        choose = input("Choose form 1-4: ")
+        if choose == "1":
+            name = input("Enter the Name of the NoteBook: ")
+            content = input(f"{name}\n")
+            linkers.create(name, content)
 
-        elif n == "4":
-            print(l)
+        elif choose == "2":
+            linkers.edit(name)
 
-        elif n == "5":
+        elif choose == "3":
+            linkers.listing_note()
+        elif choose == "4":
             break
-
         else:
-            print('Something happen check the code')
-
-    else:
-        quit("Stop")
+            print('Wrong choose')
 
 
-
-creating()
+links()
