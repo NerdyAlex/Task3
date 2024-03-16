@@ -9,7 +9,7 @@ def per_square(l1):
 
 
 def per_rect(l, w):
-    peri_rect = 2 * l + 2 * w
+    peri_rect = 2(l + w)
     print(peri_rect)
 
 
