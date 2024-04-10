@@ -1,14 +1,20 @@
 import requests
-import json
+import datetime as dt
 
-# Make a GET request to an example API
-response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+api_key = "5548a2497a58c868fd9b26d8fc07dba8"
+city = input("Enter city: ")
 
-# Check if the request was successful (status code 200)
-if response.status_code == 200:
-    # Parse JSON response into a Python dictionary
-    data = json.loads(response.text)
-    print(data)
-else:
-    print('Error:', response.status_code)
+
+weather_data = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&APPID={api_key}")
+
+temp = weather_data.json()
+
+def kelivn_to_celsius(kel):    
+    celsius = kel - 273.00
+    print(f"The temperature is {celsius}C")
+
+
+name = 'lexy'
+name.capitalize
+print(f"{name} is tall")
 
