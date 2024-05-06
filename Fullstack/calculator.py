@@ -7,6 +7,7 @@ e = Entry(root, width=43, borderwidth=8, bg="grey", fg="black")
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=15)
 
 
+
 def click(num):
     current = e.get()
     e.delete(0, END)

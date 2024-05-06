@@ -1,0 +1,92 @@
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --main-color: #dead5f;
+    --primary-color: #312e2e;
+
+}
+
+button{
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background: #100e0f; 
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-family: sans-serif;
+
+    padding-top: 15px;
+}
+
+
+li{
+    display: inline;
+    list-style: none;
+    margin-left: 40px;
+    
+
+}
+
+li a{
+    color: #fff;
+    text-decoration: none;
+    text-underline-position: auto;
+    padding-bottom: 10px;
+}
+
+li a:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+
+header{
+    background: url(cofe.webp);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(56, 41, 3);
+    position: relative;
+    text-align: center;
+}
+
+.main-headings{
+    position: absolute;
+    top: 7rem;
+    font-size: 4em;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+
+.primary-headings{
+    position: absolute;
+    bottom: 4rem;
+    font-size: 4em;
+    word-spacing: 10px;
+    margin-bottom: 10px;
+
+}
