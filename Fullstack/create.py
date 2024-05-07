@@ -1,21 +1,32 @@
 from tkinter import *
-from PIL import ImageTk, Image
+from tkinter import ttk
 
 root = Tk()
-root.title('My Game')
-root.iconbitmap('c:/Users/user/Task3/Fullstack.py/favicon.ico')
+root.title("Demo")
+root.geometry('300x150')
 
-my_img = ImageTk.PhotoImage(Image.open("c:/Users/user/Task3/Fullstack.py/hello.jpg"))
-my_label = Label(image=my_img)
-my_label.pack()
-
-
-
-
+def convert():
+    global m
+    m = entry.get()
+    km = m * 1000
+    
 
 
-quit_button = Button(root, text="Exist Program", command=root.quit)
-quit_button.pack()
+label = Label(root, text="Meters to kilometers", font="Arial 20 bold",
+              )
+frame = ttk.Frame(root)
+entry = ttk.Entry(frame)
+button = ttk.Button(frame, text="Convert", command=convert)
+
+label.pack()
+entry.pack(side="left", padx=7)
+button.pack(side="left")
+frame.pack(padx=3)
+
+
+output = ttk.Label(root, text="Output", font="Arial 24 bold")
+output.pack(padx=3)
+
 
 
 root.mainloop()
