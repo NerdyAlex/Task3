@@ -17,3 +17,41 @@ def myClick():
 
 botton = Button(root, text="Guess a number", command=myClick, fg="black")
 botton.pack()"""
+
+
+
+
+"""ef submit():
+    info = entry.get()
+    print("Hello", info)
+    entry.config(state=DISABLED)
+
+
+def delete():
+    entry.delete(0, END)
+    
+
+
+def backspace():
+    entry.delete(len(entry.get())-1, END)
+    
+
+
+root.title("Demo")
+entry = Entry(root, font=("Arial ", 30), 
+              background='black', fg="green", 
+              show="*"
+              )
+
+entry.insert(0, "Name")
+entry.pack(side="left")
+
+submit_button = Button(root, text='submit', command= submit)
+submit_button.pack(side="left")
+
+delete_button = Button(root, text='delete', command= delete)
+delete_button.pack(side="left")
+
+backspace_button = Button(root, text='backspace', command= backspace)
+backspace_button.pack(side="left")
+"""
