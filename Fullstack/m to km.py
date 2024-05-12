@@ -1,7 +1,8 @@
 import tkinter as tk
-from tkinter import ttk
+#from tkinter import ttk
+import ttkbootstrap as ttk
 
-root = tk.Tk()
+root = ttk.Window(themename="darkly")
 root.title("Demo")
 root.geometry('300x150')
 
